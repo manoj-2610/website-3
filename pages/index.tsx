@@ -1,5 +1,6 @@
 // pages/index.tsx
 // @prompt: Build a modern legaltech homepage using Tailwind CSS and TypeScript for a digital-first Austrian law firm
+import Link from 'next/link';
 
 export default function Home(): JSX.Element {
   return (
@@ -10,12 +11,11 @@ export default function Home(): JSX.Element {
         <p className="text-xl max-w-2xl mx-auto">
           Your modern digital law firm – helping startups & businesses thrive across Austria & Europe.
         </p>
-        <a
-          href="/pricing"
-          className="mt-6 inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg hover:bg-blue-100 transition"
-        >
-          View Our Pricing
-        </a>
+        <Link href="/pricing" passHref>
+          <a className="mt-6 inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg hover:bg-blue-100 transition">
+            View Our Pricing
+          </a>
+        </Link>
       </section>
 
       {/* Services Section */}
@@ -41,12 +41,11 @@ export default function Home(): JSX.Element {
       <section className="bg-green-50 text-center py-16 px-4">
         <h2 className="text-3xl font-bold text-green-700 mb-4">Transparent Pricing</h2>
         <p className="text-lg mb-6">No hidden fees. Simple legal plans tailored for startups.</p>
-        <a
-          href="/pricing"
-          className="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition"
-        >
-          See Pricing Plans
-        </a>
+        <Link href="/pricing" passHref>
+          <a className="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">
+            See Pricing Plans
+          </a>
+        </Link>
       </section>
     </div>
   );
