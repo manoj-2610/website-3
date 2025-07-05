@@ -8,11 +8,10 @@ export default function Home() {
       <p className="text-lg text-gray-600 mb-6">Your trusted startup legal partner.</p>
 
       <Link href="/pricing/">
-        <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+        <a className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
           View Pricing
-        </button>
+        </a>
       </Link>
     </div>
   )
 }
-
